@@ -2,7 +2,7 @@ import React from 'react'
 
 const DashboardItemsLg = ({name, icon: Icon, article}) => {
   return (
-    <div className='ml-0 m-3 dark:bg-[#151110] p-3 flex flex-col rounded-md border dark:border-gray-700 shadow-md gap-y-4'>
+    <div className=' my-3 dark:bg-[#151110] p-3 flex flex-col rounded-md border dark:border-gray-700 shadow-md gap-y-4'>
         <Icon 
         className="dark:bg-[#EA580B] h-10 w-10 p-2 rounded-md mx-auto lg:mx-0"
         />

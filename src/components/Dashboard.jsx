@@ -15,7 +15,7 @@ const Dashboard = () => {
             <h2>Workspace</h2>
             <p className='font-light text-gray-700 dark:text-gray-400'> Overview of your work space</p>
 
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  h-20 '>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  h-20 gap-x-2 '>
                 {dashOneItems.map((item)=> (
                     <DashboardItems
                     key={item.number}
@@ -32,7 +32,7 @@ const Dashboard = () => {
             <h2>Let's get started with this useful tools.</h2>
             <p className='font-light text-gray-400'>Explore our tools that you can use to generate blog post, analyze SERP and more.</p>
 
-            <div className='grid  grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 '>
+            <div className='grid  grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-2'>
                 {dashTwoItems.map((item)=> (
                     <DashboardItemsLg
                     key={item.id}
