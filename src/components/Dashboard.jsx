@@ -5,7 +5,7 @@ import DashboardItemsLg from './DashboardItemsLg'
 
 const Dashboard = () => {
   return (
-    <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-screen w-full dark:text-white flex flex-col '>
+    <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-full w-full dark:text-white flex flex-col '>
         <div className='flex flex-col'>
             <h1 className='font-bold'>Hello, Henry</h1>
             <p className='font-light text-gray-700 dark:text-gray-400'>Dashboard is a place where you can find the overview of your products, documents and useful tools, that you can use to generate AI content.</p>

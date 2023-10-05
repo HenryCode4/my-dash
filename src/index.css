@@ -11,3 +11,9 @@ html {
 html.dark{
   --line-color: rgba(255, 255, 255, 0.2);
 }
+
+html,
+body,
+:root {
+  @apply  dark:bg-black
+}
