@@ -11,7 +11,7 @@ const Dashboard = () => {
             <p className='font-light text-gray-400'>Dashboard is a place where you can find the overview of your products, documents and useful tools, that you can use to generate AI content.</p>
         </div>
 
-        <div className='pt-10 lg:pt-28'>
+        <div className='pt-10'>
             <h2>Workspace</h2>
             <p className='font-light text-gray-400'> Overview of your work space</p>
 
@@ -28,7 +28,7 @@ const Dashboard = () => {
             </div>
         </div>
 
-        <div className='pt-40 lg:pt-28'>
+        <div className='pt-40 lg:pt-10'>
             <h2>Let's get started with this useful tools.</h2>
             <p className='font-light text-gray-400'>Explore our tools that you can use to generate blog post, analyze SERP and more.</p>
 
