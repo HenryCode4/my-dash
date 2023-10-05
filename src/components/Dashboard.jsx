@@ -32,7 +32,7 @@ const Dashboard = () => {
             <h2>Let's get started with this useful tools.</h2>
             <p className='font-light text-gray-400'>Explore our tools that you can use to generate blog post, analyze SERP and more.</p>
 
-            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
+            <div className='grid  grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 '>
                 {dashTwoItems.map((item)=> (
                     <DashboardItemsLg
                     key={item.id}
