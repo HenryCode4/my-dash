@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className=" relative ">
-      <div className="text-white bg-[rgb(21,17,16)] h-full w-full py-6 px-4 flex items-center justify-between">
+      <div className="text-white bg-[rgb(21,17,16)]/20 h-full w-full py-6 px-4 flex items-center justify-between">
         <div className="font-semibold flex gap-x-2">
           <Home /> <span className="font-light text-gray-300">/</span> Dashboard
         </div>
