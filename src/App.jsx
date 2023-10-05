@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 
 export default function App() {
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-50">
       <div className="h-[80px] fixed lg:pl-72 w-full " >
         <Navbar />
       </div>

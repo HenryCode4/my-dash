@@ -5,15 +5,15 @@ import DashboardItemsLg from './DashboardItemsLg'
 
 const Dashboard = () => {
   return (
-    <div className=' py-6 px-4 md:py-10 md:px-10 bg-black h-screen w-full text-white flex flex-col '>
+    <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-screen w-full dark:text-white flex flex-col '>
         <div className='flex flex-col'>
             <h1 className='font-bold'>Hello, Henry</h1>
-            <p className='font-light text-gray-400'>Dashboard is a place where you can find the overview of your products, documents and useful tools, that you can use to generate AI content.</p>
+            <p className='font-light text-gray-700 dark:text-gray-400'>Dashboard is a place where you can find the overview of your products, documents and useful tools, that you can use to generate AI content.</p>
         </div>
 
         <div className='pt-10'>
             <h2>Workspace</h2>
-            <p className='font-light text-gray-400'> Overview of your work space</p>
+            <p className='font-light text-gray-700 dark:text-gray-400'> Overview of your work space</p>
 
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  h-20 '>
                 {dashOneItems.map((item)=> (

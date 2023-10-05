@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-:root{
-  height: 100%;
-  background: black;
+
+
+html {
+  --line-color: #e5e7eb;
+}
+
+html.dark{
+  --line-color: rgba(255, 255, 255, 0.2);
 }

@@ -5,9 +5,9 @@ import SidebarItem from './SidebarItem'
 const Sidebar = () => {
     
   return (
-    <div className='overflow-y-auto flex flex-col border-r h-full border-gray-200 bg-[rgb(21,17,16)]'>
+    <div className='overflow-y-auto flex flex-col border-r h-full border-gray-100 dark:bg-[rgb(21,17,16)]'>
         <div className='pt-6 pl-4'>
-            <div className='text-white/40 text-2xl font-bold'> My<span className='text-orange-500'>.</span>Dashboard</div>
+            <div className='text-gray-950/60  dark:text-white/40 text-2xl font-bold'> My<span className='text-orange-500'>.</span>Dashboard</div>
         </div>
 
         <div className='flex flex-col mt-8 pl-6 text-gray-400'>
