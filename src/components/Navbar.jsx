@@ -25,7 +25,7 @@ const Navbar = () => {
 
         <div className="hidden lg:block">
           <div className="flex gap-x-6 items-center">
-            <div className="bg-gray-200 dark:bg-[rgb(218,96,32)] p-2 rounded-md flex gap-x-2">
+            <div className="bg-[rgb(218,96,32)] text-white p-2 rounded-md flex gap-x-2">
               <ShipWheel /> Connect OpenAI
             </div>
 
