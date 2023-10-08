@@ -3,6 +3,36 @@ import React, { useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { integration, overView, tools, workSpace } from "../libs/action";
 import ThemeSwitch from "./ThemeSwitch";
+import {motion} from "framer-motion"
+
+const variantDash = {
+    hidden: {
+        opacity: 0
+    },
+
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.4,
+            delay: 0.5,
+        }
+    }
+}
+
+const variantProfile = {
+    hidden: {
+        opacity: 0,
+    },
+
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.4,
+            delay: 0.5,
+        }
+    }
+}
+
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -19,11 +49,19 @@ const Navbar = () => {
   return (
     <div className=" relative ">
       <div className="text-gray-950  bg-gray-50 dark:bg-[rgb(21,17,16)] dark:text-gray-50 dark:text-opacity-90 h-full w-full py-6 px-4 flex items-center justify-between ">
-        <div className="font-semibold flex gap-x-2">
+        <motion.div className="font-semibold flex gap-x-2"
+        variants={variantDash} 
+        initial='hidden'
+        animate='visible'
+        >
           <Home /> <span className="font-light text-gray-400">/</span> Dashboard
-        </div>
+        </motion.div>
 
-        <div className="hidden lg:block">
+        <motion.div className="hidden lg:block"
+        variants={variantProfile} 
+        initial='hidden'
+        animate='visible'
+        >
           <div className="flex gap-x-6 items-center">
             <div className="bg-[rgb(218,96,32)] text-white p-2 rounded-md flex gap-x-2">
               <ShipWheel /> Connect OpenAI
@@ -47,7 +85,7 @@ const Navbar = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         <div className="flex items-center gap-x-8 lg:hidden">
           <div onClick={onClick} className=" cursor-pointer">
@@ -74,7 +112,7 @@ const Navbar = () => {
               <BatteryMedium />
             </div>
 
-            <div className="flex gap-x-4 items-center">
+            <div className="flex gap-x-4 items-center ">
               <img
                 src="./chima.png"
                 alt="profile"

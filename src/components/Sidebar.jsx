@@ -1,16 +1,54 @@
 import React from 'react'
 import { integration, overView, tools, workSpace } from '../libs/action'
 import SidebarItem from './SidebarItem'
+import {motion} from 'framer-motion'
+
+
+const variantHead = {
+    hidden: {
+        x: -200
+    },
+
+    visible: {
+        x: 0,
+        transition: {
+            duration: 0.2,
+            type: 'spring',
+            stiffness: 120,
+        }
+    }
+}
+
+const containerVariants = {
+    hidden: { 
+      x: '-100vh', 
+    },
+    visible: { 
+      x: 0, 
+      transition: { delay: 0.5, duration: 0.5, type: 'spring',  }
+    },
+  };
+
 
 const Sidebar = () => {
     
   return (
     <div className='overflow-y-auto  flex flex-col border-r h-full border-gray-100 dark:bg-[rgb(21,17,16)]'>
-        <div className='pt-6 pl-4'>
-            <div className=' text-transparent p-3 bg-clip-text  bg-gradient-to-r from-orange-500 via-gray-500 to-white text-3xl font-bold'> My<span className='text-orange-500'>.</span>Dashboard</div>
-        </div>
+        <motion.div
+        variants={variantHead} 
+        initial='hidden'
+        animate='visible'
 
-        <div className='flex flex-col mt-8 pl-6 text-gray-400'>
+        className='pt-6 pl-4'>
+            <div className=' text-transparent p-3 bg-clip-text  bg-gradient-to-r from-orange-500 via-gray-500 to-white text-3xl font-bold'> My<span className='text-orange-500'>.</span>Dashboard</div>
+        </motion.div>
+
+        <motion.div className='flex flex-col mt-8 pl-6 text-gray-400'
+        variants={containerVariants}
+        initial='hidden'
+        animate='visible'
+
+        >
              <h3 className=''>Overview</h3>
              
                 {overView.map((item, index)=> (
@@ -53,7 +91,7 @@ const Sidebar = () => {
                     />
                 ))}
              
-        </div>
+        </motion.div>
     </div>
   )
 }

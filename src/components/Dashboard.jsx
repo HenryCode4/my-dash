@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { dashOneItems, dashTwoItems } from '../libs/action'
 import DashboardItems from './DashboardItems'
 import DashboardItemsLg from './DashboardItemsLg'
+import Loading from './Loading'
 
 const Dashboard = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=> {
+        setTimeout(() => {
+            setLoading(false)
+        }, 5000);
+    }, [])
+
   return (
-    <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-full w-full dark:text-white flex flex-col '>
+    <>
+    {loading ? <Loading /> 
+    : <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-full w-full dark:text-white flex flex-col '>
         <div className='flex flex-col'>
             <h1 className='font-bold'>Hello, Henry</h1>
             <p className='font-light text-gray-700 dark:text-gray-400'>Dashboard is a place where you can find the overview of your products, documents and useful tools, that you can use to generate AI content.</p>
@@ -51,7 +62,10 @@ const Dashboard = () => {
 
 
         
-    </div>
+    </div>}
+    
+    </>
+    
   )
 }
 
