@@ -15,7 +15,8 @@ const Dashboard = () => {
 
   return (
     <>
-    {loading ? <Loading /> 
+    {loading ? 
+    <Loading /> 
     : <div className=' py-6 px-4 md:py-10 md:px-10 bg-white text-gray-950 dark:bg-black h-full w-full dark:text-white flex flex-col '>
         <div className='flex flex-col'>
             <h1 className='font-bold'>Hello, Henry</h1>

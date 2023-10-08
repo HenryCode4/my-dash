@@ -1,5 +1,5 @@
-import React from 'react'
-import {AnimatePresence, motion, } from 'framer-motion'
+import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 // const loadingContainer = {
 //     start: {
@@ -21,78 +21,83 @@ import {AnimatePresence, motion, } from 'framer-motion'
 //                 }
 //             }
 //     },
-    
+
 // }
 
 const loadingContainerVariant = {
-    start: {
-        transition: {
-            staggerChildren: 0.2
-        }
+  start: {
+    transition: {
+      staggerChildren: 0.2,
     },
-    end: {
-        transition: {
-            staggerChildren: 0.2
-        }
-    }
-}
+  },
+  end: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const loadingVariants = {
-    start: {
-        y: '0%'
+  start: {
+    y: "0%",
+  },
+  end: {
+    y: "100%",
+    transition: {
+      duration: 1.5,
+      type: 'spring',
+      stiffness: 170,
+      repeat: Infinity,
+      ease: "easeOut",
     },
-    end: {
-        y: '100%',
-        transition: {
-            duration: 1.5,
-    repeat: Infinity,
-    ease: "easeOut"
-        }
-    }
-}
-
-
+  },
+};
 
 const Loading = () => {
-    
   return (
     <AnimatePresence>
-        <motion.div className='pt-[80px] h-full flex flex-col items-center bg-white dark:bg-black '
-    initial={{x: '-100vh'}}
-    animate={{x: 0}}
-    exit={{ y: '-100vh'}}
-    transition={{duration: 1}}
-    >
-        <h1 className='text-3xl font-bold p-10 text-orange-600'>Welcome Henry </h1>
-        <p className='text-xl font-semibold'>Enjoy our amazing AI tools </p>
+      <motion.div
+        className="pt-[80px] h-full flex flex-col items-center bg-white dark:bg-black "
+        initial={{ x: "-100vh" }}
+        animate={{ x: 0 }}
+        exit={{ y: "-100vh" }}
+        transition={{ duration: 1, type: "spring", stiffness: 70 }}
+      >
+        <h1 className="text-3xl font-bold p-10 text-orange-600">
+          Welcome Henry{" "}
+        </h1>
+        <p className="text-xl font-semibold">Enjoy our amazing AI tools </p>
 
-        <motion.div className='flex justify-around gap-x-3 p-4'
-         variants={loadingContainerVariant}
-         initial='start'
-         animate='end'
-         >
-            <motion.span className='bg-orange-600 h-5 w-5 rounded-full block' 
+        <motion.div
+          className="flex justify-around gap-x-3 p-4"
+          variants={loadingContainerVariant}
+          initial="start"
+          animate="end"
+        >
+          <motion.span
+            className="bg-orange-600 h-5 w-5 rounded-full block"
             variants={loadingVariants}
             // transition={loadingCircleTransition}
-            ></motion.span>
-            <motion.span className='bg-orange-600 h-5 w-5 rounded-full block' 
+          ></motion.span>
+          <motion.span
+            className="bg-orange-600 h-5 w-5 rounded-full block"
             variants={loadingVariants}
             // transition={loadingCircleTransition}
-            ></motion.span>
-            <motion.span className='bg-orange-600 h-5 w-5 rounded-full block' 
+          ></motion.span>
+          <motion.span
+            className="bg-orange-600 h-5 w-5 rounded-full block"
             variants={loadingVariants}
             // transition={loadingCircleTransition}
-            ></motion.span>            
-            <motion.span className='bg-orange-600 h-5 w-5 rounded-full block' 
+          ></motion.span>
+          <motion.span
+            className="bg-orange-600 h-5 w-5 rounded-full block"
             variants={loadingVariants}
             // transition={loadingCircleTransition}
-            ></motion.span>            
+          ></motion.span>
         </motion.div>
-
-    </motion.div>
+      </motion.div>
     </AnimatePresence>
-    
-  )
-}
+  );
+};
 
-export default Loading
+export default Loading;
