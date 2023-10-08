@@ -1,21 +1,28 @@
 import React from 'react'
-import {motion, } from 'framer-motion'
+import {AnimatePresence, motion, } from 'framer-motion'
 
-const loadingContainer = {
-    start: {
-        x: '-100vh'
-    },
+// const loadingContainer = {
+//     start: {
+//         x: '-100vh'
+//     },
 
-    end: {
-        x: '0',
-        transition: {
-            duration: 0.7,
-            type: 'spring',
-            stiffness: 120,
-            staggerChildren: 0.1
-        }
-    }
-}
+//     end: {
+//         x: '0',
+//         transition: {
+//             duration: 0.7,
+//             type: 'spring',
+//             stiffness: 120,
+//             staggerChildren: 0.1
+//         },
+//         exit: {
+//                 y: '-100vh',
+//                 transition: {
+//                     duration: 1
+//                 }
+//             }
+//     },
+    
+// }
 
 const loadingContainerVariant = {
     start: {
@@ -49,10 +56,12 @@ const loadingVariants = {
 const Loading = () => {
     
   return (
-    <motion.div className='pt-[80px] h-full flex flex-col items-center bg-white dark:bg-black '
-    variants={loadingContainer}
-    initial='start'
-    animate='end'
+    <AnimatePresence>
+        <motion.div className='pt-[80px] h-full flex flex-col items-center bg-white dark:bg-black '
+    initial={{x: '-100vh'}}
+    animate={{x: 0}}
+    exit={{ y: '-100vh'}}
+    transition={{duration: 1}}
     >
         <h1 className='text-3xl font-bold p-10 text-orange-600'>Welcome Henry </h1>
         <p className='text-xl font-semibold'>Enjoy our amazing AI tools </p>
@@ -81,6 +90,8 @@ const Loading = () => {
         </motion.div>
 
     </motion.div>
+    </AnimatePresence>
+    
   )
 }
 
